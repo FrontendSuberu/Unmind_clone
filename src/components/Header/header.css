@@ -1,0 +1,50 @@
+.sub_header{
+    display: flex; 
+    max-width: 1440px;
+    padding: 10px;
+    margin-inline: 60px;
+    align-items: center;
+    justify-content: space-between;
+    --tw-text-opacity: 1;
+    font-family: 'Body Serif';
+    font-weight: 500;
+    color: rgb(45 21 13 / var(--tw-text-opacity))
+}
+
+
+.links{
+    display: flex;
+    list-style: none;
+}
+
+.links li{
+    padding: 6px;
+    font-size: 16px;
+    /* font-family: ; */
+}
+
+.menu{
+    display: none;
+}
+
+.other_cta{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.other_cta a{
+    text-decoration: none;
+}
+
+.sign_in{
+    color: black;
+}
+
+.request{
+    background: #FFDE33;
+    color: #2D150D;
+    font-size: 14px;
+    border-radius: 6px;
+    padding: 8px 8px;
+}
