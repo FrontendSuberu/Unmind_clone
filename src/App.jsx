@@ -1,14 +1,12 @@
-import './App.css'
-import Header from './components/Header/Header'
+import "./App.css";
+import Home from "./pages/Home/Home"
 
 function App() {
   return (
-   <>
-   <Header />
-    <h1 className=''>BUILDING MENTALLY 
-    HEALTHY BUSINESSES</h1>
-   </>
-  )
+    <>
+     <Home />
+    </>
+  );
 }
 
-export default App
+export default App;

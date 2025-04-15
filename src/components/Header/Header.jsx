@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/logo.svg"
 import "./header.css";
+import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 function Header() {
@@ -11,10 +12,10 @@ function Header() {
           <div><img src={logo} alt="unwind logo" /></div>
 
           <ul className="links">
-            <li>Platform</li>
-            <li>Solution</li>
-            <li>Impact</li>
-            <li>Resources</li>
+            <li>Platform <MdOutlineKeyboardArrowDown /></li>
+            <li>Solution <MdOutlineKeyboardArrowDown /></li>
+            <li>Impact <MdOutlineKeyboardArrowDown /></li>
+            <li>Resources <MdOutlineKeyboardArrowDown /></li>
           </ul>
 
           <div className="other_cta">
