@@ -13,7 +13,7 @@ function Header() {
 
           <ul className="links">
             <li>Platform <MdOutlineKeyboardArrowDown /></li>
-            <li>Solution <MdOutlineKeyboardArrowDown /></li>
+            <li>Solutions <MdOutlineKeyboardArrowDown /></li>
             <li>Impact <MdOutlineKeyboardArrowDown /></li>
             <li>Resources <MdOutlineKeyboardArrowDown /></li>
           </ul>
