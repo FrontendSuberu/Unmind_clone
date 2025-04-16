@@ -8,6 +8,10 @@
 
 .hero-content{
     max-width: 1750px;
+    display: flex;
+    height: max-content;
+    gap: 20px;
+    flex-direction: column;
     padding-top: 150px;
 }
 
@@ -16,6 +20,7 @@
     width: 54.3%;
     margin: 0 auto;
     color: #2d150d;
+    will-change: auto;
     text-align: center;
     line-height: .8;
     font-size: 110px;
@@ -25,11 +30,29 @@
 .hero-content p{
     width: 100%;
     text-align: center;
-    padding-top: 30px;
     max-width: 600px;
+    will-change: auto;
     margin: 0 auto;
     font-family: 'Body Serif';
     font-size: 20px;
     color: rgba(45, 21, 13, .75);
     line-height: 30px;
+}
+
+.hero-content a{
+    font-family: 'Body Serif';
+    border-radius: 6px;
+    background: #2d150d;
+    text-align: center;
+    margin: 0 auto;
+    font-size: 18px;
+    color: #f2ede3;
+    will-change: auto;
+    padding: 8px 12px;
+}
+
+
+.hed{
+    height: 200vh;
+    width: 100%;
 }

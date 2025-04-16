@@ -24,3 +24,27 @@
 body{
   font-family: 'Smooth Serif';
 }
+
+.cookies_btn{
+  border-radius: 50%;
+  border: 1px solid #e1e1e1;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  background: #fff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  left: 20px;
+  bottom: 20px;
+  position: fixed;
+}
+
+.cookies_btn svg{
+  padding-top: 1px !important;
+  width: 34px !important;
+  height: 34px !important;
+  cursor: pointer !important;
+}
