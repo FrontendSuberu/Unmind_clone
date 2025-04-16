@@ -1,8 +1,9 @@
 .hero{
-    height: 120vh;
+    /* height: 120vh; */
     width: 100%;
     justify-content: center;
     display: flex;
+    flex-direction: column;
     background: #f2ede3;
 }
 
@@ -15,6 +16,14 @@
     padding-top: 150px;
 }
 
+
+.hero_slider{
+    height: 475px;
+    margin: 40px auto;
+    max-width: 760px;
+    width: 100%;
+    background-color: #ffffff;
+}
 
 .hero-content h1{
     width: 54.3%;
@@ -52,7 +61,41 @@
 }
 
 
-.hed{
-    height: 200vh;
+/* sponsors */
+.sponsors{
+    padding-block: 120px;
     width: 100%;
+    padding-inline: 52px;
+    max-width: 1750px;
+    margin: 0 auto;
+}
+
+.sponsors p{
+    font-family: 'Body Serif';
+    text-align: center;
+    font-size: 18px;
+    font-weight: 450;
+    margin-bottom: 42px;
+}
+
+.sponsors_logos{
+    display: grid;
+    row-gap: 3.75rem;
+    width: 100%;
+    gap: 28px;
+    max-width: 824px;
+    margin: 0 auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.sponsors_logos img{
+    width: 100%;
+    max-width: 80px;
+}
+
+.logo_wrapper{
+    /* min-height: 156px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
