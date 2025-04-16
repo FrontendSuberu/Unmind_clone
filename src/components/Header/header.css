@@ -14,7 +14,7 @@ header {
   max-width: 1750px;
   padding: 10px;
   border-radius: 12px;
-  margin-inline: 60px;
+  margin-inline: 20px;
   align-items: center;
   background: white;
   justify-content: space-between;
@@ -24,7 +24,7 @@ header {
 }
 
 .links {
-  display: flex;
+  display: none;
   list-style: none;
   gap: 14px;
 }
@@ -39,7 +39,7 @@ header {
 }
 
 .menu {
-  display: none;
+  display: block;
 }
 
 .other_cta {
@@ -54,12 +54,35 @@ header {
 
 .sign_in {
   color: black;
+  display: none;
 }
 
 .request {
   background: #ffde33;
   color: #2d150d;
+  display: none;
   font-size: 14px;
   border-radius: 6px;
   padding: 8px 8px;
+}
+
+/* media queries */
+@media (min-width: 768px) {
+  .sub_header {
+    margin-inline: 60px;
+  }
+}
+@media (min-width: 890px) {
+  .links {
+    display: flex;
+  }
+
+  .sign_in,
+  .request {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+  }
 }
