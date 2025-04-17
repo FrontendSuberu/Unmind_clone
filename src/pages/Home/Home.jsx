@@ -63,7 +63,11 @@ function Home() {
         </motion.div>
 
         {/* slider */}
-        <div className="hero_slider"></div>
+        <motion.div
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          // transition={{ delay: 0.63 }}
+          viewport={{ once: true }} className="hero_slider"></motion.div>
       </div>
 
       <div className="sponsors">
