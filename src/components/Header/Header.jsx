@@ -7,6 +7,10 @@ import { AnimatePresence, motion } from "motion/react";
 
 function Header() {
   const [Platform, setPlatform] = useState(false);
+  const [Solutions, setSolutions] = useState(false);
+  const [Impact, setImpact] = useState(false);
+  const [Resources, setResources] = useState(false);
+
   return (
     <>
       <header>
@@ -25,22 +29,67 @@ function Header() {
               <AnimatePresence mode="wait">
                 {Platform && (
                   <motion.div
+                    className="platform_details"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                    className="platform_details"
                   ></motion.div>
                 )}
               </AnimatePresence>
             </li>
-            <li>
+
+            <li
+              onClick={() => {
+                setSolutions(!Solutions);
+              }}
+            >
               Solutions <MdOutlineKeyboardArrowDown />
+              <AnimatePresence mode="wait">
+                {Solutions && (
+                  <motion.div
+                    className="platform_details"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  ></motion.div>
+                )}
+              </AnimatePresence>
             </li>
-            <li>
+
+            <li
+              onClick={() => {
+                setImpact(!Impact);
+              }}
+            >
               Impact <MdOutlineKeyboardArrowDown />
+              <AnimatePresence mode="wait">
+                {Impact && (
+                  <motion.div
+                    className="platform_details"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  ></motion.div>
+                )}
+              </AnimatePresence>
             </li>
-            <li>
+
+            <li
+              onClick={() => {
+                setResources(!Resources);
+              }}
+            >
               Resources <MdOutlineKeyboardArrowDown />
+              <AnimatePresence mode="wait">
+                {Resources && (
+                  <motion.div
+                    className="platform_details"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  ></motion.div>
+                )}
+              </AnimatePresence>
             </li>
           </ul>
 

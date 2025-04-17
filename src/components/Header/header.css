@@ -75,14 +75,18 @@ header::selection {
 
 /*  */
 .platform_details{
-  width: 450px;
-  height: 300px;
+  width: 750px;
+  padding-inline: 40px;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 440px;
   position: absolute;
   top: 60px;
-  left: 160px;
   border-radius: 6px;
   background: white;
 }
+
+
 /* media queries */
 @media (min-width: 768px) {
   .sub_header {
