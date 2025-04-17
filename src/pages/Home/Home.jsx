@@ -44,16 +44,16 @@ const container = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0.15,
+      staggerChildren: 0.15, // Staggering animation delay between items
     },
   },
 };
 
 const item = {
-  initial: { opacity: 0, y: 10 },
-  animate: { opacity: 1, y: 0 },
-  exit: { opacity: 0, y: 10 },
+  hidden: { opacity: 0, y: 20 },
+  show: { opacity: 1, y: 0 },
 };
+
 
 function Home() {
   return (
@@ -95,7 +95,7 @@ function Home() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: .65 }}
         >
           {Sponsors.map((sponsor, key) => (
             <div className="logo_wrapper" key={key}>
