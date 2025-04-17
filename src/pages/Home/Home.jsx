@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 
 // sponsors
-import spon1 from "../../assets/sponsors/spon1.png";
-import spon2 from "../../assets/sponsors/spon2.png";
-import spon3 from "../../assets/sponsors/spon3.png";
-import spon4 from "../../assets/sponsors/spon4.png";
-import spon5 from "../../assets/sponsors/spon5.png";
-import spon6 from "../../assets/sponsors/spon6.png";
-import spon7 from "../../assets/sponsors/spon7.png";
-import spon8 from "../../assets/sponsors/spon8.png";
+import spon1 from "../../assets/sponsors/spon1.svg";
+import spon2 from "../../assets/sponsors/spon2.svg";
+import spon3 from "../../assets/sponsors/spon3.svg";
+import spon4 from "../../assets/sponsors/spon4.svg";
+import spon5 from "../../assets/sponsors/spon5.svg";
+import spon6 from "../../assets/sponsors/spon6.svg";
+import spon7 from "../../assets/sponsors/spon7.svg";
+import spon8 from "../../assets/sponsors/spon8.svg";
 
 const Sponsors = [
   {
@@ -39,6 +39,21 @@ const Sponsors = [
     img: spon8,
   },
 ];
+
+const container = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.15,
+    },
+  },
+};
+
+const item = {
+  initial: { opacity: 0, y: 10 },
+  animate: { opacity: 1, y: 0 },
+  exit: { opacity: 0, y: 10 },
+};
 
 function Home() {
   return (
@@ -75,16 +90,21 @@ function Home() {
 
       <div className="sponsors">
         <p>Trusted by companies of all sizes around the world</p>
-
-        <div className="sponsors_logos">
-          {Sponsors.map((sponsor, key) => {
-            return (
-              <div className="logo_wrapper">
-                <img src={sponsor.img} id={key} />
-              </div>
-            );
-          })}
-        </div>
+        <motion.div
+          className="sponsors_logos"
+          variants={container}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.3 }}
+        >
+          {Sponsors.map((sponsor, key) => (
+            <div className="logo_wrapper" key={key}>
+              <motion.div variants={item}>
+                <img src={sponsor.img} alt={`sponsor-${key}`} />
+              </motion.div>
+            </div>
+          ))}
+        </motion.div>
       </div>
     </>
   );

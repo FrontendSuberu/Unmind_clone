@@ -1,15 +1,26 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import logo from "../../assets/logo.svg";
 import "./header.css";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { AnimatePresence, motion } from "motion/react";
+import { useEffect } from "react";
 
 function Header() {
-  const [Platform, setPlatform] = useState(false);
-  const [Solutions, setSolutions] = useState(false);
-  const [Impact, setImpact] = useState(false);
-  const [Resources, setResources] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
+  const linksRef = useRef();
+
+  // Close dropdown on click outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (linksRef.current && !linksRef.current.contains(e.target)) {
+        setActiveDropdown(null);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
     <>
@@ -19,75 +30,89 @@ function Header() {
             <img src={logo} alt="unwind logo" />
           </div>
 
-          <ul className="links">
+          <ul className="links" ref={linksRef}>
             <li
-              onClick={() => {
-                setPlatform(!Platform);
-              }}
+              onClick={() =>
+                setActiveDropdown(
+                  activeDropdown === "platform" ? null : "platform"
+                )
+              }
             >
               Platform <MdOutlineKeyboardArrowDown />
               <AnimatePresence mode="wait">
-                {Platform && (
+                {activeDropdown === "platform" && (
                   <motion.div
                     className="platform_details"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                  ></motion.div>
+                  >
+                    {/* Platform content */}
+                  </motion.div>
                 )}
               </AnimatePresence>
             </li>
 
             <li
-              onClick={() => {
-                setSolutions(!Solutions);
-              }}
+              onClick={() =>
+                setActiveDropdown(
+                  activeDropdown === "solutions" ? null : "solutions"
+                )
+              }
             >
               Solutions <MdOutlineKeyboardArrowDown />
               <AnimatePresence mode="wait">
-                {Solutions && (
+                {activeDropdown === "solutions" && (
                   <motion.div
                     className="solution_details"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                  ></motion.div>
+                  >
+                    {/* Solutions content */}
+                  </motion.div>
                 )}
               </AnimatePresence>
             </li>
 
             <li
-              onClick={() => {
-                setImpact(!Impact);
-              }}
+              onClick={() =>
+                setActiveDropdown(activeDropdown === "impact" ? null : "impact")
+              }
             >
               Impact <MdOutlineKeyboardArrowDown />
               <AnimatePresence mode="wait">
-                {Impact && (
+                {activeDropdown === "impact" && (
                   <motion.div
                     className="impact_details"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                  ></motion.div>
+                  >
+                    {/* Impact content */}
+                  </motion.div>
                 )}
               </AnimatePresence>
             </li>
 
             <li
-              onClick={() => {
-                setResources(!Resources);
-              }}
+              onClick={() =>
+                setActiveDropdown(
+                  activeDropdown === "resources" ? null : "resources"
+                )
+              }
             >
               Resources <MdOutlineKeyboardArrowDown />
               <AnimatePresence mode="wait">
-                {Resources && (
+                {activeDropdown === "resources" && (
                   <motion.div
                     className="resources_details"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
-                  ></motion.div>
+                  >
+                    {/* Resources content */}
+                  </motion.div>
                 )}
               </AnimatePresence>
             </li>
