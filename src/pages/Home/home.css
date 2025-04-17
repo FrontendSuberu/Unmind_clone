@@ -11,6 +11,8 @@
 .hero-content {
   max-width: 1750px;
   display: flex;
+  width: 100%;
+  margin: 0 auto;
   height: max-content;
   gap: 20px;
   flex-direction: column;
@@ -78,14 +80,13 @@
 }
 
 .sponsors_logos {
+  margin-left: auto;
+  margin-right: auto;
   display: grid;
-  row-gap: 3.75rem;
-  width: 100%;
-  height: 100%;
-  gap: 28px;
-  max-width: 824px;
-  margin: 0 auto;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 842px;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2rem; /* gap-8 = 32px */
+  row-gap: 3.75rem; /* gap-y-15 = 60px */
 }
 
 .sponsors_logos img {
@@ -98,6 +99,34 @@
   justify-content: center;
   align-items: center;
 }
+
+/* platforms */
+.platform{
+  max-width: 1750px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.platform_cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 24px;
+}
+
+
+.platform_card {
+  width: 100%;
+  max-width: 348px;
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 20px;
+  background: #f2ede3;
+  color: #2d150dbf;
+  padding-inline: 20px;
+}
+
+
 
 /* media queries */
 @media (min-width: 480px) {
@@ -112,12 +141,12 @@
     font-size: 80px;
   }
 
-  .sponsors{
+  .sponsors {
     padding: 52px 120px;
   }
 
   .sponsors_logos {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .hero {
@@ -130,7 +159,7 @@
     font-size: 110px;
   }
 
-  .logo_wrapper {
-    min-height: 156px;
+  .sponsors_logos {
+    column-gap: 2.5rem; /* gap-10 = 40px */
   }
 }

@@ -12,6 +12,7 @@ import spon5 from "../../assets/sponsors/spon5.svg";
 import spon6 from "../../assets/sponsors/spon6.svg";
 import spon7 from "../../assets/sponsors/spon7.svg";
 import spon8 from "../../assets/sponsors/spon8.svg";
+import { BsArrowRight } from "react-icons/bs";
 
 const Sponsors = [
   {
@@ -40,6 +41,7 @@ const Sponsors = [
   },
 ];
 
+// animation varients
 const container = {
   hidden: {},
   show: {
@@ -54,6 +56,24 @@ const item = {
   show: { opacity: 1, y: 0 },
 };
 
+// array of platform images
+const forcards = [
+  {
+    title: "For Individuals",
+    link: "/",
+    text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
+  },
+  {
+    title: "For Leaders",
+    link: "/",
+    text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
+  },
+  {
+    title: "For Organizations",
+    link: "/",
+    text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
+  },
+];
 
 function Home() {
   return (
@@ -95,7 +115,7 @@ function Home() {
           variants={container}
           initial="hidden"
           whileInView="show"
-          viewport={{ once: true, amount: .65 }}
+          viewport={{ once: true, amount: 0.65 }}
         >
           {Sponsors.map((sponsor, key) => (
             <div className="logo_wrapper" key={key}>
@@ -105,6 +125,36 @@ function Home() {
             </div>
           ))}
         </motion.div>
+      </div>
+
+      <div className="platform">
+        <h1>Our platform</h1>
+
+        <p>
+          A whole-person, whole-organization approach to sustainable
+          high-performance.
+        </p>
+
+        <div className="platform_cards">
+          {forcards.map((forcard, index) => (
+            <Link to={forcard.link} className="platform_card">
+              <div className="card_top">
+                {/* title for each card */}
+                <h1>{forcard.title}</h1>
+
+                {/* arrow interaction */}
+                <div>
+                  <p>Learn More</p>
+                  <BsArrowRight />
+                </div>
+              </div>
+
+              <p>{forcard.text}</p>
+
+              <div className="card_image"></div>
+            </Link>
+          ))}
+        </div>
       </div>
     </>
   );
