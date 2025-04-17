@@ -47,7 +47,7 @@ function Header() {
               <AnimatePresence mode="wait">
                 {Solutions && (
                   <motion.div
-                    className="platform_details"
+                    className="solution_details"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -65,7 +65,7 @@ function Header() {
               <AnimatePresence mode="wait">
                 {Impact && (
                   <motion.div
-                    className="platform_details"
+                    className="impact_details"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
@@ -83,7 +83,7 @@ function Header() {
               <AnimatePresence mode="wait">
                 {Resources && (
                   <motion.div
-                    className="platform_details"
+                    className="resources_details"
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}

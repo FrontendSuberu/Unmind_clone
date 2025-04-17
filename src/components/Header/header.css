@@ -86,6 +86,42 @@ header::selection {
   background: white;
 }
 
+.solution_details{
+  width: 750px;
+  padding-inline: 40px;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 340px;
+  position: absolute;
+  top: 60px;
+  border-radius: 6px;
+  background: white;
+}
+
+.impact_details{
+  width: 550px;
+  padding-inline: 40px;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 240px;
+  position: absolute;
+  top: 60px;
+  border-radius: 6px;
+  background: white;
+}
+
+.resources_details{
+  width: 650px;
+  padding-inline: 40px;
+  transform: translateX(-50%);
+  left: 50%;
+  height: 220px;
+  position: absolute;
+  top: 60px;
+  border-radius: 6px;
+  background: white;
+}
+
 
 /* media queries */
 @media (min-width: 768px) {
