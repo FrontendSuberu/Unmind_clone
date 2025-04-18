@@ -22,8 +22,7 @@ import icon03 from "../../assets/platform/icons/Icons-3-.svg";
 import img01 from "../../assets/platform/for-individuals-thumb.svg";
 import img02 from "../../assets/platform/for-leaders-thumb.svg";
 import img03 from "../../assets/platform/for-organizations-thumb.svg";
-import { FaUser, FaUsers } from "react-icons/fa";
-import { FaRegBuilding } from "react-icons/fa";
+import Carousel from "../../components/Carousel/Carousel";
 
 const Sponsors = [
   {
@@ -131,7 +130,9 @@ function Home() {
 
           viewport={{ once: true, amount: 0.25 }}
           className="hero_slider"
-        ></motion.div>
+        >
+          <Carousel />
+        </motion.div>
       </div>
 
       <div className="sponsors">

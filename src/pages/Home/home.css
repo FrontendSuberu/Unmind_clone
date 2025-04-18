@@ -1,6 +1,8 @@
 .hero {
   /* height: 120vh; */
   width: 100%;
+  padding-top: 150px;
+  padding-bottom: 60px;
   justify-content: center;
   display: flex;
   padding-inline: 24px;
@@ -16,13 +18,12 @@
   height: max-content;
   gap: 20px;
   flex-direction: column;
-  padding-top: 150px;
 }
 
 .hero_slider {
-  height: 475px;
+  height: 464px;
   margin: 40px auto;
-  max-width: 760px;
+  max-width: 100%;
   width: 100%;
   background-color: #ffffff;
 }
@@ -164,10 +165,8 @@
   padding-inline: 20px;
 }
 
-
-.platform_card a{
+.platform_card a {
   color: #2d150dbf;
-
 }
 
 .card_image {
@@ -254,7 +253,7 @@
   display: flex;
 }
 
-.platform_title{
+.platform_title {
   text-align: center;
   font-size: 24px;
 }
@@ -290,7 +289,10 @@
     font-size: 80px;
   }
 
-  .platform_title{
+  .hero {
+    padding-bottom: 100px;
+  }
+  .platform_title {
     font-size: 36px;
   }
 
