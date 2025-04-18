@@ -214,6 +214,15 @@ function Home() {
           ))}
         </motion.div>
       </div>
+
+      <div className="impact">
+        <h1>Our impact</h1>
+
+        <p>
+          Mentally healthy companies are competitive companies –every dollar
+          invested in mental health pays back.
+        </p>
+      </div>
     </>
   );
 }
