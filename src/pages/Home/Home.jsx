@@ -14,6 +14,11 @@ import spon7 from "../../assets/sponsors/spon7.svg";
 import spon8 from "../../assets/sponsors/spon8.svg";
 import { BsArrowRight } from "react-icons/bs";
 
+// platform
+import img01 from "../../assets/platform/for-individuals-thumb.svg";
+import img02 from "../../assets/platform/for-leaders-thumb.svg";
+import img03 from "../../assets/platform/for-organizations-thumb.svg";
+
 const Sponsors = [
   {
     img: spon1,
@@ -61,16 +66,19 @@ const forcards = [
   {
     title: "For Individuals",
     link: "/",
+    img: img01,
     text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
   },
   {
     title: "For Leaders",
     link: "/",
+    img: img02,
     text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
   },
   {
     title: "For Organizations",
     link: "/",
+    img: img03,
     text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
   },
 ];
@@ -128,12 +136,14 @@ function Home() {
       </div>
 
       <div className="platform">
-        <h1>Our platform</h1>
+        <div className="platform_intro">
+          <h1>Our platform</h1>
 
-        <p>
-          A whole-person, whole-organization approach to sustainable
-          high-performance.
-        </p>
+          <p>
+            A whole-person, whole-organization approach to sustainable
+            high-performance.
+          </p>
+        </div>
 
         <div className="platform_cards">
           {forcards.map((forcard, index) => (
@@ -151,7 +161,9 @@ function Home() {
 
               <p>{forcard.text}</p>
 
-              <div className="card_image"></div>
+              <div className="card_image">
+                <img src={forcard.img} />
+              </div>
             </Link>
           ))}
         </div>
