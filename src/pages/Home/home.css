@@ -105,7 +105,6 @@
   display: flex;
   flex-direction: column;
   gap: 64px;
-  padding-inline: 24px;
   padding-block: 32px;
   font-family: "Body Serif";
   max-width: 1750px;
@@ -114,8 +113,6 @@
 }
 
 .platform h1 {
-  text-align: center;
-  font-size: clamp(1.5rem, 1.1939rem + 1.6327vw, 2.5rem);
   line-height: 1.24;
   font-feature-settings: "ss02" on, "ss07" on, "ss08" on;
   font-optical-sizing: auto;
@@ -123,26 +120,38 @@
   -webkit-font-smoothing: antialiased;
 }
 
-.platform p{
+.platform p {
   width: 100%;
+  min-height: 24px;
+  padding-block: 24px;
+  line-height: 24px;
   max-width: 500px;
-  text-align: center;
+  /* text-align: center;  */
   will-change: auto;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.platform_intro{
+.platform_intro {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
 
+.platform_intro p {
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .platform_cards {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  flex-direction: row;
-  gap: 24px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* You can tweak this depending on your setup */
+  padding-right: 1rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem; /* gap-6 */
 }
 
 .platform_card {
@@ -164,10 +173,109 @@
   width: 100%;
 }
 
+.card_arrow {
+  display: none;
+  /* overflow: hidden; */
+  background: #f2ede3;
+  /* display: flex; */
+}
+
+.card_arrow p {
+  position: absolute;
+  width: max-content;
+}
+
+.card_arrow:hover .card_arrow p {
+  position: relative;
+}
+
+.card_arrow svg {
+  background: #f2ede3;
+}
+
+.learn-more-wrapper {
+  display: none;
+  width: 150px;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .learn-more-wrapper {
+    display: inline-flex;
+  }
+}
+
+.learn-more-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 2rem; /* 8 * 0.25rem = 2rem */
+  border-radius: 100px;
+  background-color: var(--primary-color);
+  background-opacity: 0.1;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.learn-more-text {
+  box-sizing: border-box;
+  overflow: hidden;
+  color: var(--primary-color);
+  font-size: 0; /* text-[0px] */
+  opacity: 0;
+  width: 0;
+  will-change: opacity;
+}
+
+.learn-more-text .learn-more-label {
+  white-space: nowrap;
+  padding-right: 0.25rem;
+  color: var(--secondary-color);
+  font-size: 0.875rem; /* Tailwind's body-4 if it's 14px or similar */
+}
+
+.learn-more-icon {
+  transition: all 0.5s;
+  stroke: var(--primary-color);
+}
+
+.card_icn img {
+  display: none;
+}
+
+.card_icn {
+  gap: 12px;
+  display: flex;
+}
+
+.platform_title{
+  text-align: center;
+  font-size: 24px;
+}
+
 /* media queries */
 @media (min-width: 480px) {
   .hero-content h1 {
     margin: 0 auto;
+  }
+
+  .platform_intro p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 640px) {
+  .platform_cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card_arrow {
+    display: block;
+  }
+
+  .platform {
+    padding-inline: 24px;
   }
 }
 
@@ -177,8 +285,29 @@
     font-size: 80px;
   }
 
-  .platform_card {
-    max-width: 360px;
+  .platform_title{
+    font-size: 36px;
+  }
+
+  .card_icn img {
+    display: block;
+  }
+
+  .card_icn h1 {
+    font-weight: 600;
+    width: 80%;
+  }
+
+  .card_top {
+    gap: 16px;
+    width: 100%;
+    justify-content: space-between;
+    /* width: 90%; */
+    display: flex;
+  }
+
+  .platform_cards {
+    grid-auto-rows: 1fr;
   }
 
   .sponsors {
@@ -197,6 +326,11 @@
 @media (min-width: 1024px) {
   .hero-content h1 {
     font-size: 110px;
+  }
+
+  .platform_cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem; /* gap-4 */
   }
 
   .sponsors_logos {

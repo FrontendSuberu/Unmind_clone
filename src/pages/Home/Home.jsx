@@ -14,10 +14,18 @@ import spon7 from "../../assets/sponsors/spon7.svg";
 import spon8 from "../../assets/sponsors/spon8.svg";
 import { BsArrowRight } from "react-icons/bs";
 
+
+import icon01 from "../../assets/platform/icons/Icons-1-.svg"
+import icon02 from "../../assets/platform/icons/Icons-2-.svg"
+import icon03 from "../../assets/platform/icons/Icons-3-.svg"
+
+
 // platform
 import img01 from "../../assets/platform/for-individuals-thumb.svg";
 import img02 from "../../assets/platform/for-leaders-thumb.svg";
 import img03 from "../../assets/platform/for-organizations-thumb.svg";
+import { FaUser, FaUsers } from "react-icons/fa";
+import { FaRegBuilding } from "react-icons/fa";
 
 const Sponsors = [
   {
@@ -67,19 +75,22 @@ const forcards = [
     title: "For Individuals",
     link: "/",
     img: img01,
+    svg: icon01,
     text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
   },
   {
     title: "For Leaders",
     link: "/",
     img: img02,
-    text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
+    svg: icon02,
+    text: "Strengthen your organization with science-backed coaching and development tools, nurturing leadership skills and successful teams.",
   },
   {
     title: "For Organizations",
     link: "/",
     img: img03,
-    text: "Revitalize your organization's mental health through accessible therapy, advanced wellbeing tools, and content backed by science.",
+    svg: icon03,
+    text: "Integrate a data-driven approach to wellbeing, connecting mental health strategies to enhanced business outcomes.",
   },
 ];
 
@@ -88,7 +99,7 @@ function Home() {
     <>
       <div className="hero">
         <motion.div
-          initial={{ opacity: 0, y: 10 }}
+          initial={{ opacity: 0, y: -5 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.33 }}
           viewport={{ once: true }}
@@ -137,7 +148,7 @@ function Home() {
 
       <div className="platform">
         <div className="platform_intro">
-          <h1>Our platform</h1>
+          <h1 className="platform_title">Our platform</h1>
 
           <p>
             A whole-person, whole-organization approach to sustainable
@@ -150,12 +161,19 @@ function Home() {
             <Link to={forcard.link} className="platform_card">
               <div className="card_top">
                 {/* title for each card */}
-                <h1>{forcard.title}</h1>
+                <div className="card_icn">
+                  <img src={forcard.svg} />
+                  <h1>{forcard.title}</h1>
+                </div>
 
                 {/* arrow interaction */}
-                <div>
-                  <p>Learn More</p>
-                  <BsArrowRight />
+                <div class="learn-more-wrapper">
+                  <div class="learn-more-button">
+                    <div class="learn-more-text">
+                      <span class="learn-more-label">Learn more</span>
+                    </div>
+                    <BsArrowRight />
+                  </div>
                 </div>
               </div>
 
