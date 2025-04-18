@@ -2,6 +2,7 @@ header {
   position: fixed;
   width: 100%;
   max-width: 1750px;
+  z-index: 7000000;
   margin-inline: auto;
   font-family: "Body Serif";
   top: 0;

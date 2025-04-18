@@ -14,11 +14,9 @@ import spon7 from "../../assets/sponsors/spon7.svg";
 import spon8 from "../../assets/sponsors/spon8.svg";
 import { BsArrowRight } from "react-icons/bs";
 
-
-import icon01 from "../../assets/platform/icons/Icons-1-.svg"
-import icon02 from "../../assets/platform/icons/Icons-2-.svg"
-import icon03 from "../../assets/platform/icons/Icons-3-.svg"
-
+import icon01 from "../../assets/platform/icons/Icons-1-.svg";
+import icon02 from "../../assets/platform/icons/Icons-2-.svg";
+import icon03 from "../../assets/platform/icons/Icons-3-.svg";
 
 // platform
 import img01 from "../../assets/platform/for-individuals-thumb.svg";
@@ -60,6 +58,15 @@ const container = {
   show: {
     transition: {
       staggerChildren: 0.15, // Staggering animation delay between items
+    },
+  },
+};
+
+const containers = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12, // Staggering animation delay between items
     },
   },
 };
@@ -148,43 +155,63 @@ function Home() {
 
       <div className="platform">
         <div className="platform_intro">
-          <h1 className="platform_title">Our platform</h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.25 }}
+            className="platform_title"
+          >
+            Our platform
+          </motion.h1>
 
-          <p>
+          <motion.p
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.33 }}
+            viewport={{ once: true, amount: 0.25 }}
+          >
             A whole-person, whole-organization approach to sustainable
             high-performance.
-          </p>
+          </motion.p>
         </div>
 
-        <div className="platform_cards">
+        <motion.div
+          variants={containers}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.15 }}
+          className="platform_cards"
+        >
           {forcards.map((forcard, index) => (
-            <Link to={forcard.link} className="platform_card">
-              <div className="card_top">
-                {/* title for each card */}
-                <div className="card_icn">
-                  <img src={forcard.svg} />
-                  <h1>{forcard.title}</h1>
-                </div>
+            <motion.div variants={item} className="platform_card">
+              <Link to={forcard.link}>
+                <div className="card_top">
+                  {/* title for each card */}
+                  <div className="card_icn">
+                    <img src={forcard.svg} />
+                    <h1>{forcard.title}</h1>
+                  </div>
 
-                {/* arrow interaction */}
-                <div class="learn-more-wrapper">
-                  <div class="learn-more-button">
-                    <div class="learn-more-text">
-                      <span class="learn-more-label">Learn more</span>
+                  {/* arrow interaction */}
+                  <div class="learn-more-wrapper">
+                    <div class="learn-more-button">
+                      <div class="learn-more-text">
+                        <span class="learn-more-label">Learn more</span>
+                      </div>
+                      <BsArrowRight />
                     </div>
-                    <BsArrowRight />
                   </div>
                 </div>
-              </div>
 
-              <p>{forcard.text}</p>
+                <p>{forcard.text}</p>
 
-              <div className="card_image">
-                <img src={forcard.img} />
-              </div>
-            </Link>
+                <div className="card_image">
+                  <img src={forcard.img} />
+                </div>
+              </Link>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </>
   );
