@@ -14,6 +14,9 @@ import spon7 from "../../assets/sponsors/spon7.svg";
 import spon8 from "../../assets/sponsors/spon8.svg";
 import { BsArrowRight } from "react-icons/bs";
 
+import sponz2 from "../../assets/platform/icons/diageo-white.svg"
+import ladies2 from "../../assets/impact/nice_image.png"
+
 import icon01 from "../../assets/platform/icons/Icons-1-.svg";
 import icon02 from "../../assets/platform/icons/Icons-2-.svg";
 import icon03 from "../../assets/platform/icons/Icons-3-.svg";
@@ -229,7 +232,7 @@ function Home() {
 
         <div className="impact-grid">
           <div className="impact-1">
-            <div>
+            <div className="impact-top">
               <img src={spon5} />
 
               {/* arrow interaction */}
@@ -265,8 +268,8 @@ function Home() {
           </div>
 
           <div className="impact-2">
-            <div>
-              <img src={spon2} />
+            <div className="impact-top">
+              <img src={sponz2} />
 
               {/* arrow interaction */}
               <div class="learn-more-wrapper">
@@ -279,12 +282,18 @@ function Home() {
               </div>
             </div>
 
-            <p>Case study</p>
+            <div>
+              <p>Case study</p>
 
-            <h3>
-              How Diageo launched Unmind mental health app to all employees
-              worldwide for World Mental Health Day
-            </h3>
+              <h3>
+                How Diageo launched Unmind mental health app to all employees
+                worldwide for World Mental Health Day
+              </h3>
+
+              <div className="learn_wrapper">
+                <img src={ladies2} />
+              </div>
+            </div>
           </div>
         </div>
       </div>

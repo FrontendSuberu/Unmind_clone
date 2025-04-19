@@ -225,7 +225,7 @@
 }
 
 .profile_img {
-  width: 75px;
+  width: 48px;
   height: 48px;
   border-radius: 190px;
   background: black;
@@ -291,6 +291,12 @@
   padding-inline: 24px;
 }
 
+.impact-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .impact h1 {
   font-size: 24.327px;
   text-align: center;
@@ -324,6 +330,7 @@
 .impact-1 {
   padding: 20px;
   width: 100%;
+  justify-content: space-between;
   display: flex;
   flex-direction: column;
   gap: 160px;
@@ -350,11 +357,42 @@
 
 .impact-2 {
   padding: 20px;
+  display: flex;
+  color: #ffd7cc;
+  flex-direction: column;
+  gap: 160px;
+  justify-content: space-between;
   min-height: 500px;
   border-radius: 20px;
   background: #2d1503;
 }
 
+.impact-2 h3 {
+  font-size: 1.5rem;
+  line-height: 1.3;
+  font-feature-settings: "ss02" on, "ss07" on, "ss08" on;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.impact-2 p{
+  font-size: 0.875rem;
+  font-feature-settings: "ss02" on, "ss07" on, "ss08" on;
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-bottom: 12px;
+}
+
+.learn_wrapper{
+  margin-top: 16px;
+  width: auto;
+  border-radius: 20px;
+}
+
+.learn_wrapper img{
+  width: 100%;
+  border-radius: 20px;
+}
 /* media queries */
 @media (min-width: 480px) {
   .hero-content h1 {
@@ -368,6 +406,7 @@
 
 @media (min-width: 640px) {
   .platform_cards {
+    padding-inline: 2.5rem;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
