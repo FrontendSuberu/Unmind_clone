@@ -216,12 +216,77 @@ function Home() {
       </div>
 
       <div className="impact">
-        <h1>Our impact</h1>
+        <div className="impact-hero">
+          <h1>Our impact</h1>
 
-        <p>
-          Mentally healthy companies are competitive companies –every dollar
-          invested in mental health pays back.
-        </p>
+          <p>
+            <span>Mentally healthy companies are competitive companies</span>
+            <span>–every dollar invested in mental health pays back.</span>
+          </p>
+        </div>
+
+        <div className="impact-counter"></div>
+
+        <div className="impact-grid">
+          <div className="impact-1">
+            <div>
+              <img src={spon5} />
+
+              {/* arrow interaction */}
+              <div class="learn-more-wrapper">
+                <div class="learn-more-button">
+                  <div class="learn-more-text">
+                    <span class="learn-more-label">Learn more</span>
+                  </div>
+                  <BsArrowRight />
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <p>Case study</p>
+
+              <h3>
+                "People are constantly moving. We wanted something that is
+                self-driven, something that can be used on your own time, and
+                something that can be personalized. Everyone's different and we
+                recognize that."
+              </h3>
+
+              {/* image profile */}
+              <div className="profile">
+                <div className="profile_img"></div>
+                <div className="profile_details">
+                  <h3>Jon Coyles</h3>
+                  <p>VP of Drug, Health and Safety Programs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="impact-2">
+            <div>
+              <img src={spon2} />
+
+              {/* arrow interaction */}
+              <div class="learn-more-wrapper">
+                <div class="learn-more-button">
+                  <div class="learn-more-text">
+                    <span class="learn-more-label">Learn more</span>
+                  </div>
+                  <BsArrowRight />
+                </div>
+              </div>
+            </div>
+
+            <p>Case study</p>
+
+            <h3>
+              How Diageo launched Unmind mental health app to all employees
+              worldwide for World Mental Health Day
+            </h3>
+          </div>
+        </div>
       </div>
     </>
   );

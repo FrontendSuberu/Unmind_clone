@@ -127,7 +127,7 @@ header::selection {
 /* media queries */
 @media (min-width: 768px) {
   .sub_header {
-    margin-inline: 60px;
+    margin-inline: 40px;
   }
 }
 @media (min-width: 890px) {
