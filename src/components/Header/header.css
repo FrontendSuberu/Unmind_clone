@@ -144,3 +144,9 @@ header::selection {
     display: none;
   }
 }
+
+@media (min-width:1024px) {
+  .sub_header {
+    margin-inline: 20px;
+  }
+}
