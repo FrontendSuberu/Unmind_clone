@@ -5,12 +5,12 @@
   padding-bottom: 60px;
   justify-content: center;
   display: flex;
-  padding-inline: 24px;
   flex-direction: column;
   background: #f2ede3;
 }
 
 .hero-content {
+  padding-inline: 24px;
   max-width: 1750px;
   display: flex;
   width: 100%;
@@ -399,6 +399,10 @@
     margin: 0 auto;
   }
 
+  .hero-content{
+    padding-inline: 0;
+  }
+
   .platform_intro p {
     font-size: 18px;
   }
@@ -431,6 +435,10 @@
   .hero-content h1 {
     width: 54.3%;
     font-size: 80px;
+  }
+
+  .hero{
+    padding-inline: 0;
   }
 
   .impact h1 {
