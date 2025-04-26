@@ -7,13 +7,18 @@
   .slider-track {
     display: flex;
     width: calc(300px * 12); /* 6 images * 2 (for loop) */
+    /* gap: 1px; */
     animation: scroll 20s linear infinite;
   }
   
   .slide {
-    flex: 0 0 auto;
-    width: 300px;
+    width: 100%;
     margin-right: 20px;
+  }
+
+  .slide img{
+    border-radius: 20px;
+    width: auto;
   }
   
   .slider-track:hover {

@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import logo from "../../assets/logo.svg";
+import logo from "../../../assets/logo.svg";
 import "./header.css";
 import { MdOutlineKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";

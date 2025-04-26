@@ -14,8 +14,8 @@ import spon7 from "../../assets/sponsors/spon7.svg";
 import spon8 from "../../assets/sponsors/spon8.svg";
 import { BsArrowRight } from "react-icons/bs";
 
-import sponz2 from "../../assets/platform/icons/diageo-white.svg"
-import ladies2 from "../../assets/impact/nice_image.png"
+import sponz2 from "../../assets/platform/icons/diageo-white.svg";
+import ladies2 from "../../assets/impact/nice_image.png";
 
 import icon01 from "../../assets/platform/icons/Icons-1-.svg";
 import icon02 from "../../assets/platform/icons/Icons-2-.svg";
@@ -294,6 +294,33 @@ function Home() {
                 <img src={ladies2} />
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="results">
+        <h1>Our evidence</h1>
+        <p>
+          Proven results make Unmind the trusted choice for transforming
+          workplace mental health.
+        </p>
+
+        <div className="results-section-grid">
+          <div className="upper-grid">
+            <div className="upper-grid-top-content">
+              <h1></h1>
+              <p></p>
+            </div>
+
+            <div className="lower-grid-content">
+              <div />
+              <div />
+              <div />
+            </div>
+          </div>
+          <div className="lower-grid">
+            <div />
+            <div />
           </div>
         </div>
       </div>
