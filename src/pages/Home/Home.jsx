@@ -323,6 +323,8 @@ function Home() {
             <div />
           </div>
         </div>
+
+        <p>Hey bro it has been a long ass time since i wrote here</p>
       </div>
     </>
   );
